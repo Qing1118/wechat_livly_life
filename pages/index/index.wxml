@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="duanzi">
+    <text>段子王</text>
+</view>
+<view class="container">
+  <view wx:for="{{list}}" wx:key="duanzi_index" wx:for-index="index" we:for-item="item" >
+  <view class="details">
+    <view class="info">
+      <image src="{{item.header}}" style="width:100rpx;height:100rpx;border-radius:100px;"></image>
+      <text>{{item.name}}</text>
+      <text>发布时间: {{item.passtime}}</text>
+    </view>
+    <view>
+      <text>{{index+1}}、{{item.text}}</text>
+      <video src="{{item.video}}"   controls ></video>
+    </view>
+    <view>
+      <text>人气评论:{{item.top_comments_content}}</text>
+      <form>
+        <view class="section">
+          <input placeholder="输入您的评论：" focus="{{focus}}" class="input" />
+          <!-- <view class="btn-area"> -->
+          <button class="btn">提交</button>
+        <!-- </view> -->
+      </view>
+      </form>
+    </view>
+  </view>
+  
+  </view>
+</view>

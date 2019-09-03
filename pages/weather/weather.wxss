@@ -1,0 +1,51 @@
+/**index.wxss**/
+.duanzi {
+  display: flex;
+  /* height: 100%; */
+   /* width: 100%; */
+  margin: 0; 
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 50rpx; */
+  /* border-left: red 2px solid;
+  border-right: red 2px solid; */
+  border: red 2px solid;
+  border-radius: 100px;
+  background-color: purple;
+  padding: 0 20px;
+  color: red;
+  margin-top: 20px;
+}
+
+/* .userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+
+.input{
+  border: 2px solid blue;
+}
+
+.forecast{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.yesterday{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}

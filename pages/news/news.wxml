@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="duanzi">
+    <text>每日新闻</text>
+</view>
+<view>
+  <view wx:for="{{news_list}}" wx:key="news_index" wx:for-index="index" we:for-item="item" >
+  <view class="details">
+    <view class="info">
+      <navigator url="{{item.link}}" hover-class="hoverclass" open-type="navigateTo" style="color:red;font-size:20px;">{{item.title}}</navigator>
+      <view class="timeandcate">
+        <text wx:if="{{item.isTop}}">已置顶</text>
+        <!-- <text wx:if="{{!item.isTop}}">未置顶</text> -->
+        <text>来源：{{item.source}}</text>
+        <text>分类：{{item.category}} </text>  
+        <text>发布时间: {{item.ptime}}</text>
+        <text>不喜欢的原因：{{item.unlikeReason}}</text>
+      </view>
+      <view class="content">
+        <text>简要：{{item.digest}}</text>
+      </view>
+    </view>
+    <view>
+      <text>{{item.text}}</text>
+    </view>
+    </view>
+  </view>
+</view>

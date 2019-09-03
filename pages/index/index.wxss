@@ -1,0 +1,49 @@
+/**index.wxss**/
+.duanzi {
+  display: flex;
+  /* height: 100%; */
+   /* width: 100%; */
+  margin: 0; 
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 50rpx; */
+  /* border-left: red 2px solid;
+  border-right: red 2px solid; */
+  border: red 2px solid;
+  border-radius: 100px;
+  background-color: purple;
+  padding: 0 20px;
+  color: red;
+  margin-top: 20px;
+}
+
+.details{
+  display: flex;
+  border: 2px solid red;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: white;
+  width: 100pvh;
+}
+
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* justify-items: center;  */
+}
+
+.section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.input{
+  border: 2px red solid;
+}
+.btn{
+  border: 2px solid blue;
+  padding-left: 0;
+  padding-right: 0;
+}

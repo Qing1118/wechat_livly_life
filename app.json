@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/weather/weather"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "趣生活",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "段子王",
+        "iconPath": "/images/duanzi-no.png",
+        "selectedIconPath": "/images/duanzi-yes.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "/images/news-no.png",
+        "selectedIconPath": "/images/news-yes.png"
+      },
+      {
+        "pagePath": "pages/weather/weather",
+        "text": "天气",
+        "iconPath": "/images/video-no.png",
+        "selectedIconPath": "/images/video-yes.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view class="duanzi">
+    <text>天气预报</text>
+</view>
+<view class="container">
+<form bindsubmit="formSubmit" method="GET">
+  <view class="section">
+    <input class="input" placeholder="请输入城市名：例如成都" type="text" name="city" bindinput="cityInput"/>
+  </view>
+  <view class="btn-area">
+    <button form-type="submit" style="background-color:blue;border-radis:20px;">查询</button>
+    <!-- <button form-type="reset">Reset</button> -->
+  </view>
+  <view>
+      <swiper indicator-dots="true"
+        autoplay="false" interval="5000" duration="3000" style="margin-top:20px;width:100%">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item style="width:100%">
+            <image src="{{item}}" class="slide-image" width="" height="150" style="margin:0;text-align:center"/>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="weather">
+        <text>城市：{{weather.data.city}}</text>
+        <view class="weather-details" style="display:flex;flex-direction:column;justfy-content:space-around">
+          <text>今日温度：{{weather.data.wendu}}</text>
+         <text> 今日aqi: {{weather.data.aqi}}</text>
+         <text> 今日感冒: {{weather.data.ganmao}}</text>   
+          </view>
+           <view style="margin-top:20px;">
+            <text style="text-align:center;font-size:20px;color:red;">未来天气:</text>
+            <view wx:for="{{forecast}}" class="forecast">
+              <text>日期 ：{{item.date}}</text>
+              <text>high: {{item.high}}</text>
+              <text>low: {{item.low}}</text>
+              <text>风力： {{item.fengli}}</text>
+              <text>风向： {{item.fengxiang}}</text>
+              <text>天气： {{item.type}}</text>
+            </view>
+        </view>
+        <view class="yesterday">
+          <text>昨日天气详情：</text>
+            <text>日期 ：{{weather.data.yesterday.date}}</text>
+            <text>high: {{weather.data.yesterday.high}}</text>
+            <text>low: {{weather.data.yesterday.low}}</text>
+            <text>风力： {{weather.data.yesterday.fl}}</text>
+            <text>风向： {{weather.data.yesterday.fx}}</text>
+            <text>天气： {{weather.data.yesterday.type}}</text>
+          <!-- <text></text> -->
+        </view>
+      </view>
+  </view>
+</form>
+</view>
